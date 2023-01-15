@@ -8,7 +8,7 @@
     #menu{
         position: absolute;
         left: 130px;
-        width: 80%;
+        width: 60%;
         height: inherit;
     }
 
@@ -17,36 +17,21 @@
         display: inline-block;
         height: inherit;
         position: relative;
-        width: 130px;
+        width: 140px;
+        padding-left: 10px;
+padding-right: 10px;
     }
 
-    #menu #catalog{
-        width: 165px;
-    }
-    #menu #galleries{
-        width: 185px;
-    }
-    #menu #careers{
-        width: 180px;
-    }
     #menu div:hover{
         background-color: red;
         cursor: pointer;
     }
-
-
-    #menu a {
-        font-size: 18px;
-     position: absolute;
-     top:50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     text-decoration: none;
-     color:white;
-     white-space: nowrap;
-     box-sizing: border-box;
-     padding: 0;
+    #menu #home{
+        width: 100px; 
     }
+
+
+
     #right-part{
         width: 280px;
         height: inherit;
@@ -75,21 +60,37 @@
         cursor: pointer;
         transform:  translateY(-50%) scale(1.1);
     }
-    .material-symbols-outlined{
-        color: white;
-        display: block ;
-        position: absolute;
-        top:50%;
-        margin-top: -14px;
-        transition: all 0.1s;
-        box-sizing: border-box;
-        padding: 0;
-        margin-left: 10px;
-    }
+
     #cart{
+        position: absolute;
         right: 80px;
+        top:50%;
+        transform: translateY(-50%);
+        transition: all 0.2s;
     }
     #cart:hover{
         cursor: pointer;
-        transform: scale(1.6);
+        transform: scale(1.4) translateY(-50%);
     }
+
+
+
+    #menu span:not(.material-symbols-outlined){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+    }
+
+    #menu a{
+        text-decoration: none;
+        position: relative;
+        bottom: 3px;
+        color:white;
+        font-size: 18px;
+        
+    }
+  .material-symbols-outlined{
+    color: white;
+  }
