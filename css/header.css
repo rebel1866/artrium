@@ -1,0 +1,95 @@
+#header{
+    height: 60px;
+    width: 100%;
+    position:fixed;
+    background-color: black;
+    }
+
+    #menu{
+        position: absolute;
+        left: 130px;
+        width: 80%;
+        height: inherit;
+    }
+
+
+    #menu div{
+        display: inline-block;
+        height: inherit;
+        position: relative;
+        width: 130px;
+    }
+
+    #menu #catalog{
+        width: 165px;
+    }
+    #menu #galleries{
+        width: 185px;
+    }
+    #menu #careers{
+        width: 180px;
+    }
+    #menu div:hover{
+        background-color: red;
+        cursor: pointer;
+    }
+
+
+    #menu a {
+        font-size: 18px;
+     position: absolute;
+     top:50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-decoration: none;
+     color:white;
+     white-space: nowrap;
+     box-sizing: border-box;
+     padding: 0;
+    }
+    #right-part{
+        width: 280px;
+        height: inherit;
+        position: absolute;
+        right: 0;
+    }
+    #signin{
+        width: 100px;
+        height: inherit;
+    }
+    #signinBtn{
+        width: 100px;
+        background-color: red;
+        color:white;
+        border:0;
+        border-radius:  5px;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #signinBtn:hover{
+        background-color: DodgerBlue;
+        cursor: pointer;
+        transform:  translateY(-50%) scale(1.1);
+    }
+    .material-symbols-outlined{
+        color: white;
+        display: block ;
+        position: absolute;
+        top:50%;
+        margin-top: -14px;
+        transition: all 0.1s;
+        box-sizing: border-box;
+        padding: 0;
+        margin-left: 10px;
+    }
+    #cart{
+        right: 80px;
+    }
+    #cart:hover{
+        cursor: pointer;
+        transform: scale(1.6);
+    }
