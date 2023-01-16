@@ -5,6 +5,7 @@ body {
 }
 
 #main-content{
-    
+    position: relative;
+    top: 60px;
     
 }

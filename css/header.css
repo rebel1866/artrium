@@ -18,8 +18,8 @@
         height: inherit;
         position: relative;
         width: 140px;
-        padding-left: 10px;
-padding-right: 10px;
+        padding-left: 5px;
+padding-right: 5px;
     }
 
     #menu div:hover{
@@ -124,4 +124,34 @@ padding-right: 10px;
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  @media screen and (max-width: 1130px) {
+    #menu div{
+        width: 120px;
+    }
+    #right-part{
+        width: 220px;
+    }
+    #cart{
+        right: 40px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    #logo{
+        display: none;
+    }
+    #menu div{
+        width: 120px;
+    }
+    #right-part{
+        width: 200px;
+    }
+    #cart{
+        right: 40px;
+    }
+    #menu{
+        width: 80%;
+        left:0;
+    }
   }
