@@ -1,158 +1,176 @@
-#header{
-    height: 60px;
-    width: 100%;
-    position:fixed;
-    background-color: black;
-    z-index: 1;
-    }
+#header {
+  height: 60px;
+  width: 100%;
+  max-width: 2000px;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    #menu{
-        position: absolute;
-        left: 130px;
-        width: 65%;
-        height: inherit;
-    }
+#menu {
+  position: absolute;
+  left: 130px;
+  width: 65%;
+  height: inherit;
+}
 
+#menu div {
+  display: inline-block;
+  height: inherit;
+  position: relative;
+  width: 140px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-    #menu div{
-        display: inline-block;
-        height: inherit;
-        position: relative;
-        width: 140px;
-        padding-left: 5px;
-padding-right: 5px;
-    }
+#menu div:hover {
+  background-color: red;
+  cursor: pointer;
+}
+#menu #home {
+  width: 100px;
+}
 
-    #menu div:hover{
-        background-color: red;
-        cursor: pointer;
-    }
-    #menu #home{
-        width: 100px; 
-    }
+#right-part {
+  width: 280px;
+  height: inherit;
+  position: absolute;
+  right: 0;
+}
+#signin {
+  width: 100px;
+  height: inherit;
+}
+#signinBtn {
+  width: 100px;
+  background-color: red;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#signinBtn:hover {
+  background-color: DodgerBlue;
+  cursor: pointer;
+  transform: translateY(-50%) scale(1.1);
+}
 
+#cart {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+}
+#cart:hover {
+  cursor: pointer;
+  transform: scale(1.4) translateY(-50%);
+}
 
+#menu span:not(.material-symbols-outlined) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 
-    #right-part{
-        width: 280px;
-        height: inherit;
-        position: absolute;
-        right: 0;
-    }
-    #signin{
-        width: 100px;
-        height: inherit;
-    }
-    #signinBtn{
-        width: 100px;
-        background-color: red;
-        color:white;
-        border:0;
-        border-radius:  5px;
-        font-size: 18px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 5px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    #signinBtn:hover{
-        background-color: DodgerBlue;
-        cursor: pointer;
-        transform:  translateY(-50%) scale(1.1);
-    }
+#menu a {
+  text-decoration: none;
+  position: relative;
+  bottom: 3px;
+  color: white;
+  font-size: 18px;
+}
+.material-symbols-outlined {
+  color: white;
+}
 
-    #cart{
-        position: absolute;
-        right: 80px;
-        top:50%;
-        transform: translateY(-50%);
-        transition: all 0.2s;
-    }
-    #cart:hover{
-        cursor: pointer;
-        transform: scale(1.4) translateY(-50%);
-    }
+#logo {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: 40px;
+  width: 55px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#logo:hover {
+  background-color: dodgerblue;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
 
-
-
-    #menu span:not(.material-symbols-outlined){
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        white-space: nowrap;
-    }
-
-    #menu a{
-        text-decoration: none;
-        position: relative;
-        bottom: 3px;
-        color:white;
-        font-size: 18px;
-        
-    }
-  .material-symbols-outlined{
-    color: white;
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 
-  #logo{
-    position:absolute;
-    top:50%;
-    margin-top: -17px;
-    left: 40px;
-    width: 55px;
-    height: 35px;
-    cursor: pointer;
-    border-radius: 5px;
+@media screen and (max-width: 1130px) {
+  #menu div {
+    width: 120px;
   }
-  #logo:hover{
-    background-color: dodgerblue;
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+  #right-part {
+    width: 220px;
   }
-
-
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  #cart {
+    right: 40px;
   }
-
-  @media screen and (max-width: 1130px) {
-    #menu div{
-        width: 120px;
-    }
-    #right-part{
-        width: 220px;
-    }
-    #cart{
-        right: 40px;
-    }
+}
+@media screen and (max-width: 1000px) {
+  #logo {
+    display: none;
   }
-  @media screen and (max-width: 1000px) {
-    #logo{
-        display: none;
-    }
-    #menu div{
-        width: 120px;
-    }
-    #right-part{
-        width: 200px;
-    }
-    #cart{
-        right: 40px;
-    }
-    #menu{
-        width: 80%;
-        left:0;
-    }
+  #menu div {
+    width: 120px;
   }
+  #right-part {
+    width: 200px;
+  }
+  #cart {
+    right: 40px;
+  }
+  #menu {
+    width: 80%;
+    left: 0;
+  }
+}
