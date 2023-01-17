@@ -7,5 +7,34 @@ body {
 #main-content{
     position: relative;
     top: 60px;
-    
+}
+#slider-outer{
+    width: 1300px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+   overflow: hidden;
+}
+#slider-inner{
+    width: inherit;
+    height: inherit;
+}
+#slider-inner img{
+    position: absolute;
+   width: inherit;
+   height: inherit;
+   transition: all 1s;
+}
+
+#btn{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+}
+#btnR{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
 }

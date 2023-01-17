@@ -3,6 +3,7 @@
     width: 100%;
     position:fixed;
     background-color: black;
+    z-index: 1;
     }
 
     #menu{
@@ -98,10 +99,10 @@ padding-right: 5px;
   #logo{
     position:absolute;
     top:50%;
-    margin-top: -20px;
+    margin-top: -17px;
     left: 40px;
-    width: 60px;
-    height: 40px;
+    width: 55px;
+    height: 35px;
     cursor: pointer;
     border-radius: 5px;
   }
