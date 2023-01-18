@@ -20,7 +20,7 @@ function initSlides() {
 }
 
 function goLeft() {
-  clearInterval(timerID);
+  clearTimeout(timerID);
   if (count === 8) {
     return;
   }
@@ -36,7 +36,7 @@ function goLeft() {
 }
 
 function goRight() {
-  clearInterval(timerID);
+  clearTimeout(timerID);
   if (count === 0) {
     return;
   }
@@ -58,7 +58,7 @@ function extractTransformNum(transformStr) {
 }
 
 function goLeftRight() {
-  timerID = setInterval(function () {
+  timerID = setTimeout(function () {
     if (left) {
       goLeft();
       if (count === 8) {

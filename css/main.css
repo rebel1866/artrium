@@ -9,8 +9,9 @@ body {
   margin: 0 auto;
 }
 #slider-outer {
-  width: 1270px;
-  height: 700px;
+  width: 100%;
+  max-width: 2000px;
+  height: 650px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -24,6 +25,7 @@ body {
   width: inherit;
   height: inherit;
   transition: all 1s;
+  object-fit: cover;
 }
 
 #left,
