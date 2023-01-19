@@ -65,3 +65,36 @@ body {
   z-index: 1;
   transform: translateY(-150%);
 }
+
+@media screen and (max-width: 1400px) {
+  #slider-outer {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #slider-outer {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #slider-outer {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #slider-outer {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #slider-outer {
+    height: 150px;
+  }
+}
+
+/* temp */
+@media screen and (max-width: 880px) {
+  #menu {
+    display: none;
+  }
+}
