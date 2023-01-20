@@ -16,7 +16,7 @@ function initSlides() {
   }
   document.getElementById("left").addEventListener("click", goLeft);
   document.getElementById("right").addEventListener("click", goRight);
-  // goLeftRight();
+  goLeftRight();
 }
 
 function goLeft() {
@@ -32,7 +32,7 @@ function goLeft() {
     let transformNew = transformOld + 100;
     slide.style.transform = `translateX(${transformNew}%)`;
   }
-  // goLeftRight();
+  goLeftRight();
 }
 
 function goRight() {
@@ -48,7 +48,7 @@ function goRight() {
     let transformNew = transformOld - 100;
     slide.style.transform = `translateX(${transformNew}%)`;
   }
-  // goLeftRight();
+  goLeftRight();
 }
 
 function extractTransformNum(transformStr) {
