@@ -5,6 +5,11 @@ let timerID;
 
 function init() {
   initSlides();
+  buildNewPaintings();
+}
+
+function buildNewPaintings() {
+  // http://localhost:3000/paintings?_limit=6&_page=1
 }
 
 function initSlides() {

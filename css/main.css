@@ -244,3 +244,6 @@ body {
   max-width: 2000px;
   margin: 0 auto;
 }
+#newPaintings h1 {
+  font-family: Georgia, serif;
+}

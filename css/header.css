@@ -107,7 +107,6 @@
   border-radius: 5px;
 }
 #logo:hover {
-  background-color: dodgerblue;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
