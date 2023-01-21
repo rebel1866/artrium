@@ -179,7 +179,7 @@ body {
   height: 95%;
 }
 
-.butBtn {
+.buyBtn {
   background-color: dodgerblue;
   width: 120px;
   height: 35px;
@@ -206,8 +206,7 @@ body {
   transform: scale(1.15);
 }
 
-.butBtn::before {
-  content: "";
+.innerBtn {
   position: absolute;
   top: 0;
   left: 0;
@@ -217,12 +216,12 @@ body {
   transition: 0.3s linear;
   z-index: -1;
 }
-.butBtn:active::before {
+.buyBtn:active .innerBtn {
   background: #b31b10;
   transition: none;
 }
 
-.butBtn:hover::before {
+.buyBtn:hover .innerBtn {
   width: 100%;
 }
 
