@@ -185,13 +185,25 @@ body {
   height: 35px;
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 30px;
   cursor: pointer;
   line-height: 35px;
   border-radius: 0.5rem;
   overflow: hidden;
   z-index: 0;
   text-align: center;
+}
+.price {
+  position: absolute;
+  bottom: 25px;
+  left: 45px;
+  color: white;
+  font-size: 24px;
+  border-bottom: 5px solid red;
+  transition: all 0.2s;
+}
+.price:hover {
+  transform: scale(1.15);
 }
 
 .butBtn::before {
@@ -204,6 +216,10 @@ body {
   background: red;
   transition: 0.3s linear;
   z-index: -1;
+}
+.butBtn:active::before {
+  background: #b31b10;
+  transition: none;
 }
 
 .butBtn:hover::before {
