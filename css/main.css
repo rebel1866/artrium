@@ -235,9 +235,15 @@ body {
     width: 100%;
   }
 }
+.additional {
+  display: none;
+}
 @media screen and (min-width: 1550px) {
   .newPaint {
     width: 25%;
+  }
+  .additional {
+    display: block;
   }
 }
 #newPaintContainer {
