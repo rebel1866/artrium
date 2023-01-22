@@ -9,7 +9,13 @@ function init() {
 }
 
 function buildNewPaintings() {
-  // http://localhost:3000/paintings?_limit=6&_page=1
+  function handleData(data) {
+    console.log(data);
+  }
+
+  fetch("http://localhost:3000/paintings?_limit=8&_page=1")
+    .then((response) => response.json())
+    .then((result) => handleData(result));
 }
 
 function initSlides() {

@@ -29,6 +29,9 @@
   background-color: red;
   cursor: pointer;
 }
+#menu div:active {
+  background-color: rgb(160, 7, 7);
+}
 #menu #home {
   width: 100px;
 }
