@@ -86,12 +86,11 @@ function buildTabs() {
       return;
     }
 
-    document.getElementById("tabcontent2").style.opacity = 1;
 
     let timeFunc = bounce;
     let to = text.length;
     animate({
-      duration: 3500,
+      duration: 2500,
       timing: timeFunc,
       draw: function (progress) {
         let result = (to - from) * progress + from;

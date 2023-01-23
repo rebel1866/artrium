@@ -334,6 +334,31 @@ body {
 .chosenTab {
   background-color: red;
 }
-#tabcontent2 {
-  transition: all 3s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade {
+  display: block;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-duration: 1s;
 }
