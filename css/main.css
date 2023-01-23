@@ -106,7 +106,6 @@ body {
   text-align: center;
 }
 .newPaint {
-  /* border: 1px solid red; */
   width: 33.3%;
   height: 300px;
   float: left;
@@ -252,4 +251,89 @@ body {
 }
 #newPaintings h1 {
   font-family: Georgia, serif;
+}
+#whyus h1 {
+  text-align: center;
+}
+#whyus {
+  clear: both;
+  position: relative;
+  top: 100px;
+  color: white;
+}
+#tabview {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  border: 1px solid white;
+  width: 95%;
+  max-width: 2000px;
+  height: fit-content;
+  box-sizing: border-box;
+  transition: opacity 3s;
+}
+#tabheader {
+  font-size: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(41, 41, 41);
+}
+#tabheader div {
+  width: 33.3%;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+#tabheader div:hover {
+  background-color: red;
+}
+#tabheader div:active {
+  background-color: rgb(165, 24, 24);
+}
+#title2 {
+  font-size: 35px;
+  color: white;
+  margin: 40px 0 0 0;
+  text-align: center;
+  font-family: Georgia, serif;
+  text-decoration: underline red;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+  line-height: 35px;
+  padding-bottom: 5px;
+}
+.tab-content {
+  margin-top: 20px;
+  text-align: justify;
+  font-family: Georgia, serif;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.titlePart {
+  color: white;
+  font-family: Georgia, serif;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 10000px;
+  height: 80px;
+  font-size: 35px;
+  text-align: center;
+  vertical-align: bottom;
+  text-decoration: underline red;
+  text-underline-position: under;
+  text-decoration-thickness: 3px;
+}
+.chosenTab {
+  background-color: red;
+}
+#tabcontent2 {
+  transition: all 3s;
 }
