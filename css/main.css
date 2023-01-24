@@ -307,6 +307,18 @@ body {
   line-height: 35px;
   padding-bottom: 5px;
 }
+.resize{
+  animation-name: resize;
+  animation-duration: 1s;
+}
+@keyframes resize {
+  0% {
+    font-size: 2px;
+  }
+  100% {
+    font-size: 35px;
+  }
+}
 .tab-content {
   margin-top: 20px;
   text-align: justify;

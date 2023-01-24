@@ -102,6 +102,17 @@ function buildTabs() {
     });
     isExecuted = true;
   });
+  let isEx = false;
+  document.getElementById("n3").addEventListener("click", function () {
+    if(isEx) {
+      return;
+    }
+   document.getElementById('title3').classList.add('resize');
+   setTimeout(function(){
+    document.getElementById('title3').classList.remove('resize');
+   },1000)
+   isEx = true;
+  });
 }
 function bounce(timeFraction) {
   for (let a = 0, b = 1; 1; a += b, b /= 2) {
