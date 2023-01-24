@@ -295,7 +295,7 @@ body {
 #tabheader div:active {
   background-color: rgb(165, 24, 24);
 }
-#title2 {
+#title2 , #title3{
   font-size: 35px;
   color: white;
   margin: 40px 0 0 0;
