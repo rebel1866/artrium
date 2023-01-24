@@ -295,7 +295,8 @@ body {
 #tabheader div:active {
   background-color: rgb(165, 24, 24);
 }
-#title2 , #title3{
+#title2,
+#title3 {
   font-size: 35px;
   color: white;
   margin: 40px 0 0 0;
@@ -307,7 +308,7 @@ body {
   line-height: 35px;
   padding-bottom: 5px;
 }
-.resize{
+.resize {
   animation-name: resize;
   animation-duration: 1s;
 }
@@ -351,7 +352,7 @@ body {
   0% {
     opacity: 0;
   }
- 
+
   100% {
     opacity: 1;
   }
@@ -371,13 +372,42 @@ body {
   top: 130px;
   color: white;
 }
-#fdbContainer{
-  width:95%;
+#fdbContainer {
+  position: relative;
+  width: 95%;
   margin: 0 auto;
   max-width: 2000px;
   position: relative;
-  top:130px;
+  top: 130px;
   height: 250px;
-  border: 1.5px solid red;
   border-radius: 5px;
+  overflow: hidden;
+}
+.feedback {
+  position: absolute;
+  height: 248px;
+  width: 31%;
+  border: 1px solid white;
+  color: white;
+  font-size: 50px;
+  transition: all 1s;
+  cursor: pointer;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1550px) {
+  .feedback {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .feedback {
+    width: 47%;
+  }
+}
+#footer {
+  background-color: black;
+  position: relative;
+  top: 200px;
+  height: 100px;
 }

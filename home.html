@@ -1,160 +1,189 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <script src="js/header.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/slideAnimation.js"></script>
+    <script src="js/newPaintings.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/feedbacks.js"></script>
+    <script src="js/util.js"></script>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <script src="js/header.js"></script>
-  <script src="js/home.js"></script>
-  <script src="js/slideAnimation.js"></script>
-  <script src="js/newPaintings.js"></script>
-  <script src="js/tabs.js"></script>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200"
+    />
+  </head>
 
-<body>
-  <div id="header">
-    <img id="logo" src="img/logo.png" />
-    <div id="menu">
-      <div id="home">
-        <span id="homeInner">
-          <span class="material-symbols-outlined"> house </span>
-          <a href="">HOME</a>
-        </span>
-      </div>
-      <div id="catalog">
-        <span id="catInner">
-          <span class="material-symbols-outlined"> menu_book </span>
-          <a href="">CATALOG</a>
-        </span>
-      </div>
+  <body>
+    <div id="header">
+      <img id="logo" src="img/logo.png" />
+      <div id="menu">
+        <div id="home">
+          <span id="homeInner">
+            <span class="material-symbols-outlined"> house </span>
+            <a href="">HOME</a>
+          </span>
+        </div>
+        <div id="catalog">
+          <span id="catInner">
+            <span class="material-symbols-outlined"> menu_book </span>
+            <a href="">CATALOG</a>
+          </span>
+        </div>
 
-      <div id="galleries">
-        <span id="galInner">
-          <span class="material-symbols-outlined"> view_week </span>
-          <a href="">GALLERIES</a>
-        </span>
-      </div>
+        <div id="galleries">
+          <span id="galInner">
+            <span class="material-symbols-outlined"> view_week </span>
+            <a href="">GALLERIES</a>
+          </span>
+        </div>
 
-      <div id="careers">
-        <span id="carInner">
-          <span class="material-symbols-outlined"> supervisor_account </span>
-          <a href="">CAREERS</a>
-        </span>
+        <div id="careers">
+          <span id="carInner">
+            <span class="material-symbols-outlined"> supervisor_account </span>
+            <a href="">CAREERS</a>
+          </span>
+        </div>
+        <div id="about">
+          <span id="aboutInner">
+            <span class="material-symbols-outlined"> help </span>
+            <a href="">ABOUT US</a>
+          </span>
+        </div>
       </div>
-      <div id="about">
-        <span id="aboutInner">
-          <span class="material-symbols-outlined"> help </span>
-          <a href="">ABOUT US</a>
-        </span>
+      <div id="right-part">
+        <div id="signin">
+          <button id="signinBtn">SIGN IN</button>
+        </div>
+        <span id="cart" class="material-symbols-outlined"> shopping_cart </span>
       </div>
     </div>
-    <div id="right-part">
-      <div id="signin">
-        <button id="signinBtn">SIGN IN</button>
-      </div>
-      <span id="cart" class="material-symbols-outlined"> shopping_cart </span>
-    </div>
-  </div>
-  <div id="main-content">
-    <div id="slider-outer">
-      <div id="slider-inner">
-        <button id="left">&#60;</button>
-        <button id="right">&#62;</button>
-        <img class="slide" src="img/1.jpg" />
-        <img class="slide" src="img/2.jpg" />
-        <img class="slide" src="img/3.jpeg" />
-        <img class="slide" src="img/4.jpeg" />
-        <img class="slide" src="img/5.jpg" />
-        <img class="slide" src="img/6.jpeg" />
-        <img class="slide" src="img/7.jpeg" />
-        <img class="slide" src="img/8.jpg" />
-        <img class="slide" src="img/9.jpeg" />
+    <div id="main-content">
+      <div id="slider-outer">
+        <div id="slider-inner">
+          <button id="left">&#60;</button>
+          <button id="right">&#62;</button>
+          <img class="slide" src="img/1.jpg" />
+          <img class="slide" src="img/2.jpg" />
+          <img class="slide" src="img/3.jpeg" />
+          <img class="slide" src="img/4.jpeg" />
+          <img class="slide" src="img/5.jpg" />
+          <img class="slide" src="img/6.jpeg" />
+          <img class="slide" src="img/7.jpeg" />
+          <img class="slide" src="img/8.jpg" />
+          <img class="slide" src="img/9.jpeg" />
+        </div>
       </div>
     </div>
-  </div>
-  <div id="newPaintings">
-    <h1>NEW PAINTINGS</h1>
-  </div>
-  <div id="newPaintContainer"></div>
-  <div id="whyus">
-    <h1>WHY US?</h1>
-  </div>
-  <div id="tabview" style="opacity: 0;">
-    <div id="tabheader">
-      <div class="chosenTab" toShow="tab1" id="n1" style="border-right: 1px solid white;">COMPETENCE</div>
-      <div id="n2" toShow="tab2">RELIABILITY</div>
-      <div id="n3" toShow="tab3" style="border-left: 1px solid white;">DIGNITY</div>
+    <div id="newPaintings">
+      <h1>NEW PAINTINGS</h1>
     </div>
-    <div id="tab1" class="tab">
-      <div id="title1">
-        <div id="titleEf" class="titlePart">0% efficiency</div>
-        <div id="titlePeople" class="titlePart">0 people</div>
-        <div id="titlePartners" class="titlePart">0+ partners</div>
-      </div>
-      <div class="tab-content fade">
-        A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy
-        with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
-        of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-        existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment;
-        and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour
-        around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few
-        stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream;
-        and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the
-        little world among the stalks, and grow familiar with the countless indescribable forms of the insects and
-        flies, then I feel the presence of the Almighty.
-      </div>
+    <div id="newPaintContainer"></div>
+    <div id="whyus">
+      <h1>WHY US?</h1>
     </div>
-    <div id="tab2" class="tab" style="display: none;">
-      <div id="title2"></div>
-      <div id="tabcontent2" class="tab-content fade">
-        One morning, when Gregor Samsa woke from troubled dreams, he found
-        himself transformed in his bed into a horrible vermin. He lay on his
-        armour-like back, and if he lifted his head a little he could see his
-        brown belly, slightly domed and divided by arches into stiff sections.
-        The bedding was hardly able to cover it and seemed ready to slide off
-        any moment. His many legs, pitifully thin compared with the size of the
-        rest of him, waved about helplessly as he looked. "What's happened to
-        me?" he thought. It wasn't a dream. His room, a proper human room
-        although a little too small, lay peacefully between its four familiar
-        walls. A collection of textile samples lay spread out on the table -
-        Samsa was a travelling salesman - and above it there hung a picture that
-        he had recently cut out of an illustrated magazine and housed in a nice,
-        gilded frame. It showed a lady fitted out with a fur hat and fur boa who
-        sat upright, raising a heavy fur muff that covered the whole of her
-        lower arm towards the viewer.
+    <div id="tabview" style="opacity: 0">
+      <div id="tabheader">
+        <div
+          class="chosenTab"
+          toShow="tab1"
+          id="n1"
+          style="border-right: 1px solid white"
+        >
+          COMPETENCE
+        </div>
+        <div id="n2" toShow="tab2">RELIABILITY</div>
+        <div id="n3" toShow="tab3" style="border-left: 1px solid white">
+          DIGNITY
+        </div>
       </div>
-    </div>
-    <div id="tab3" class="tab" style="display: none;">
-      <div id="title3">We make life your brighter</div>
-      <div id="tabcontent3" class="tab-content fade">
-        "What's happened to
-        me?" he thought. From troubled dreams, he found
-        himself transformed in his bed into a horrible vermin. He lay on his
-        armour-like back, and if he lifted his head a little he could see his
-        brown belly, slightly domed and divided by arches into stiff sections.
-        The bedding was hardly able to cover it and seemed ready to slide off
-        any moment. His many legs, pitifully thin compared with the size of the
-        rest of him, waved about helplessly as he looked. "What's happened to
-        me?" he thought. It wasn't a dream. His room, a proper human room
-        although a little too small, lay peacefully between its four familiar
-        walls. A collection of textile samples lay spread out on the table -
-        Samsa was a travelling salesman - and above it there hung a picture that
-        he had recently cut out of an illustrated magazine and housed in a nice,
-        gilded frame. It showed a lady fitted out with a fur hat and fur boa who
-        sat upright, raising a heavy fur muff that covered the whole of her
-        lower arm.
+      <div id="tab1" class="tab">
+        <div id="title1">
+          <div id="titleEf" class="titlePart">0% efficiency</div>
+          <div id="titlePeople" class="titlePart">0 people</div>
+          <div id="titlePartners" class="titlePart">0+ partners</div>
+        </div>
+        <div class="tab-content fade">
+          A wonderful serenity has taken possession of my entire soul, like
+          these sweet mornings of spring which I enjoy with my whole heart. I am
+          alone, and feel the charm of existence in this spot, which was created
+          for the bliss of souls like mine. I am so happy, my dear friend, so
+          absorbed in the exquisite sense of mere tranquil existence, that I
+          neglect my talents. I should be incapable of drawing a single stroke
+          at the present moment; and yet I feel that I never was a greater
+          artist than now. When, while the lovely valley teems with vapour
+          around me, and the meridian sun strikes the upper surface of the
+          impenetrable foliage of my trees, and but a few stray gleams steal
+          into the inner sanctuary, I throw myself down among the tall grass by
+          the trickling stream; and, as I lie close to the earth, a thousand
+          unknown plants are noticed by me: when I hear the buzz of the little
+          world among the stalks, and grow familiar with the countless
+          indescribable forms of the insects and flies, then I feel the presence
+          of the Almighty.
+        </div>
+      </div>
+      <div id="tab2" class="tab" style="display: none">
+        <div id="title2"></div>
+        <div id="tabcontent2" class="tab-content fade">
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought. It wasn't a dream. His room, a proper human room
+          although a little too small, lay peacefully between its four familiar
+          walls. A collection of textile samples lay spread out on the table -
+          Samsa was a travelling salesman - and above it there hung a picture
+          that he had recently cut out of an illustrated magazine and housed in
+          a nice, gilded frame. It showed a lady fitted out with a fur hat and
+          fur boa who sat upright, raising a heavy fur muff that covered the
+          whole of her lower arm towards the viewer.
+        </div>
+      </div>
+      <div id="tab3" class="tab" style="display: none">
+        <div id="title3">We make life your brighter</div>
+        <div id="tabcontent3" class="tab-content fade">
+          "What's happened to me?" he thought. From troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought. It wasn't a dream. His room, a proper human room
+          although a little too small, lay peacefully between its four familiar
+          walls. A collection of textile samples lay spread out on the table -
+          Samsa was a travelling salesman - and above it there hung a picture
+          that he had recently cut out of an illustrated magazine and housed in
+          a nice, gilded frame. It showed a lady fitted out with a fur hat and
+          fur boa who sat upright, raising a heavy fur muff that covered the
+          whole of her lower arm.
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <div id="feedbacksTitle">
-    <h1>FEEDBACKS</h1>
-  </div>
-  <div id="fdbContainer"></div>
-</body>
-
+    <div id="feedbacksTitle">
+      <h1>FEEDBACKS</h1>
+    </div>
+    <div id="fdbContainer">
+      <div class="feedback" style="transform: translateX(-330%)">1</div>
+      <div class="feedback" style="transform: translateX(-220%)">2</div>
+      <div class="feedback" style="transform: translateX(-110%)">3</div>
+      <div id="prev" class="feedback">4</div>
+      <div class="feedback" style="transform: translateX(110%)">5</div>
+      <div id="next" class="feedback" style="transform: translateX(220%)">
+        6
+      </div>
+      <div class="feedback" style="transform: translateX(330%)">7</div>
+      <div class="feedback" style="transform: translateX(440%)">8</div>
+      <div class="feedback" style="transform: translateX(550%)">9</div>
+    </div>
+    <div id="footer"></div>
+  </body>
 </html>
