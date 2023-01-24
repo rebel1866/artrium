@@ -363,11 +363,21 @@ body {
   animation-name: fadeIn;
   animation-duration: 1s;
 }
-#feedbacks h1 {
+#feedbacksTitle h1 {
   text-align: center;
 }
-#feedbacks {
+#feedbacksTitle {
   position: relative;
-  top: 100px;
+  top: 130px;
   color: white;
+}
+#fdbContainer{
+  width:95%;
+  margin: 0 auto;
+  max-width: 2000px;
+  position: relative;
+  top:130px;
+  height: 250px;
+  border: 1.5px solid red;
+  border-radius: 5px;
 }
