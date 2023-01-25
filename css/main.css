@@ -412,7 +412,7 @@ body {
 .feedback:hover {
   background-color: rgb(156 45 45 / 1%);
 }
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1650px) {
   .feedback {
     width: 23%;
   }
@@ -420,7 +420,7 @@ body {
 
 .fdbBody {
   position: absolute;
-  height: 76%;
+  height: 75%;
   bottom: 9%;
   text-overflow: ellipsis;
   padding-left: 20px;
