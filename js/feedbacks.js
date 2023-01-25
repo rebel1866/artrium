@@ -1,6 +1,6 @@
 let feedbacks = (function () {
   let handleOver = function (e) {
-    if (window.matchMedia("(hover: none)").matches  ) {
+    if (window.matchMedia("(hover: none)").matches) {
       return;
     }
     let feedbackList = document.getElementsByClassName("feedback");

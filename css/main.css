@@ -412,7 +412,7 @@ body {
 .feedback:hover {
   background-color: rgb(156 45 45 / 1%);
 }
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 1550px) {
   .feedback {
     width: 23%;
   }
