@@ -405,6 +405,7 @@ body {
   cursor: pointer;
   border-radius: 3px;
   height: 20px;
+  font-family: Georgia, serif;
 }
 .feedback button:hover {
   background-color: rgb(140 0 0);
