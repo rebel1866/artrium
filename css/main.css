@@ -378,7 +378,7 @@ body {
   margin: 0 auto;
   max-width: 2000px;
   position: relative;
-  top: 130px;
+  top: 150px;
   height: 250px;
   border-radius: 5px;
   overflow: hidden;
@@ -389,25 +389,77 @@ body {
   width: 31%;
   border: 1px solid white;
   color: white;
-  font-size: 50px;
-  transition: all 1s;
+  transition: transform 1s;
   cursor: pointer;
   border-radius: 8px;
   box-sizing: border-box;
+  background-color: black;
+}
+.feedback button {
+  position: absolute;
+  bottom: 4px;
+  background-color: red;
+  color: white;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 20px;
+}
+.feedback button:active {
+  background-color: rgb(168, 33, 33);
+}
+.feedback:hover {
+  background-color: rgb(236, 222, 222, 0.01);
 }
 @media screen and (min-width: 1550px) {
   .feedback {
     width: 23%;
   }
 }
-@media screen and (max-width: 900px) {
-  .feedback {
-    width: 47%;
-  }
+
+.fdbBody {
+  position: absolute;
+  height: 76%;
+  bottom: 10%;
+  text-overflow: ellipsis;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  overflow: hidden;
+  text-align: justify;
 }
+
 #footer {
   background-color: black;
   position: relative;
   top: 200px;
-  height: 100px;
+  height: 60px;
+}
+
+.fdbHeader {
+  position: relative;
+  height: 10%;
+  border-radius: 8px;
+  background-color: red;
+}
+.fAuthor,
+.fDate {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.fAuthor {
+  text-align: left;
+  height: 100%;
+  line-height: 24px;
+  font-size: 22px;
+  width: 60%;
+  padding-left: 20px;
+}
+.fDate {
+  text-align: center;
+  height: 100%;
+  width: 40%;
 }
