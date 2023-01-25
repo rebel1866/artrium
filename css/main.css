@@ -466,6 +466,7 @@ body {
   float: right;
   margin-right: 30px;
   line-height: 30px;
+  /* display: none; */
 }
 #morePaint {
   clear: both;

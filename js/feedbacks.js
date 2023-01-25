@@ -117,7 +117,7 @@ let feedbacks = (function () {
 
     let date = document.createElement("div");
     date.classList.add("fDate");
-    date.innerHTML = el.date;
+    date.innerHTML = "Aug 5, 2022";
 
     fdbHeader.appendChild(author);
     fdbHeader.appendChild(date);
