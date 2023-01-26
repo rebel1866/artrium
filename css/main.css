@@ -398,7 +398,7 @@ body {
 .feedback button {
   position: absolute;
   bottom: 6px;
-  background-color: red;
+  transition: background-color 0.4s;
   color: white;
   right: 20px;
   border: none;
@@ -408,7 +408,7 @@ body {
   font-family: Georgia, serif;
 }
 .feedback button:hover {
-  background-color: rgb(140 0 0);
+  opacity: 0.8 !important;
 }
 .feedback:hover {
   background-color: rgb(156 45 45 / 1%);
@@ -445,7 +445,8 @@ body {
   position: relative;
   height: 12%;
   border-radius: 8px;
-  background-color: red;
+  transition: background-color 0.4s;
+  /* background-color: red; */
 }
 .fAuthor,
 .fDate {
@@ -503,6 +504,7 @@ body {
   top: 180px;
 }
 #moreFdbBtn {
+  transition: background-color 0.4s;
   cursor: pointer;
   margin: 0 auto;
   width: 150px;
@@ -516,7 +518,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-
 #moreFdbBtn:hover {
-  background-color: rgb(34, 96, 158);
+  --bColor: rgb(34, 96, 158);
+  background: var(--bColor) !important;
 }

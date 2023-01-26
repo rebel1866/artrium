@@ -61,6 +61,33 @@ let feedbacks = (function () {
       fdb.addEventListener("mouseover", handleOver);
     }
     window.onresize = initFeedbacks;
+    let headers = document.getElementsByClassName("fdbHeader");
+    setInterval(function () {
+      let color;
+      for (let header of headers) {
+        color = header.style.backgroundColor;
+        if (color === "red") {
+          header.style.backgroundColor = "dodgerblue";
+          header.nextElementSibling.nextElementSibling.style.backgroundColor =
+            "dodgerblue";
+        }
+        if (color === "dodgerblue") {
+          header.style.backgroundColor = "red";
+          header.nextElementSibling.nextElementSibling.style.backgroundColor =
+            "red";
+        }
+      }
+      document.getElementById("moreFdbBtn").style.backgroundColor = color;
+      if (color === "red") {
+        document
+          .getElementById("moreFdbBtn")
+          .style.setProperty("--bColor", "rgb(165, 24, 24)");
+      } else {
+        document
+          .getElementById("moreFdbBtn")
+          .style.setProperty("--bColor", "rgb(34, 96, 158)");
+      }
+    }, 5000);
   }
 
   function findElementIndex(elements, id) {
@@ -105,6 +132,7 @@ let feedbacks = (function () {
       feedback.appendChild(fbdBody);
       let btn = document.createElement("button");
       btn.innerHTML = "Read more...";
+      btn.style.backgroundColor = "red";
 
       feedback.appendChild(btn);
       document.getElementById("fdbContainer").appendChild(feedback);
@@ -118,6 +146,8 @@ let feedbacks = (function () {
     let date = document.createElement("div");
     date.classList.add("fDate");
     date.innerHTML = "Aug 5, 2022";
+
+    fdbHeader.style.backgroundColor = "red";
 
     fdbHeader.appendChild(author);
     fdbHeader.appendChild(date);
