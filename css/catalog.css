@@ -67,3 +67,27 @@ body {
   color: white;
   margin: 0 auto;
 }
+#waiting {
+  background-color: #0f0e0e;
+  border-top: 2px solid red;
+  border-left: 2px solid red;
+  border-bottom: 2px solid dodgerblue;
+  border-right: 2px solid dodgerblue;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+.rotate {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
