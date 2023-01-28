@@ -1,11 +1,13 @@
 let infiniteScroll = (function () {
   let isExecuted = false;
   let page = 2;
+  let pageSize = 8;
+  let initPageSize = 16;
   const pattern =
     '<div class="item">   <div class="itemPhoto">      <img />    </div><div class="iName iHeader"></div><div class="iAuthor iHeader"></div><div class="iPrice iHeader"></div><button class="getBtn">Buy it now!</button>  </div>';
 
   function init() {
-    fetch(`http://localhost:3000/paintings?_limit=16&_page=1`)
+    fetch(`http://localhost:3000/paintings?_limit=${initPageSize}&_page=1`)
       .then((response) => response.json())
       .then((result) => fillPaintings(result));
     document.addEventListener("scroll", handle);
@@ -48,7 +50,7 @@ let infiniteScroll = (function () {
     wait.classList.add("rotate");
     document.getElementById("moreC").innerHTML = "";
     document.getElementById("moreC").appendChild(wait);
-    fetch(`http://localhost:3000/paintings?_limit=8&_page=${page}`)
+    fetch(`http://localhost:3000/paintings?_limit=${pageSize}&_page=${page}`)
       .then((response) => response.json())
       .then((result) =>
         setTimeout(function () {
