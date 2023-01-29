@@ -1,6 +1,7 @@
 let searchAjax = (function () {
   let timer;
   let lastAjaxResult;
+  let focus = false;
   function init() {
     document.getElementById("search").addEventListener("input", function (e) {
       let val = e.target.value;
@@ -15,10 +16,31 @@ let searchAjax = (function () {
         doAjax(val);
       }, 300);
     });
-    document.getElementById("search").addEventListener("focusout", function () {
-      document.getElementById("ajaxResult").style.opacity = "0";
-      document.getElementById("search").value = "";
+    document
+      .getElementById("search")
+      .addEventListener("focusout", function (e) {
+        document.getElementById("ajaxResult").style.opacity = "0";
+        focus = false;
+        if (e.target.value === "") {
+          document.getElementById("search").style.width = "200px";
+        }
+      });
+    document.getElementById("search").addEventListener("focusin", function (e) {
+      e.target.style.width = "600px";
+      focus = true;
     });
+    document
+      .getElementById("search")
+      .addEventListener("mouseover", function (e) {
+        e.target.style.width = "600px";
+      });
+    document
+      .getElementById("search")
+      .addEventListener("mouseout", function (e) {
+        if (e.target.value === "" && !focus) {
+          document.getElementById("search").style.width = "200px";
+        }
+      });
   }
   function doAjax(query) {
     fetch(` http://localhost:3000/paintings?name_like=${query}`)
@@ -67,6 +89,8 @@ let searchAjax = (function () {
     document.getElementById("items").innerHTML = "";
     infiniteScroll.fillPaintings(lastAjaxResult);
     document.getElementById("moreC").innerHTML = "";
+    document.getElementById("search").style.width = "200px";
+    document.getElementById("search").value = "";
   }
   return { init: init };
 })();

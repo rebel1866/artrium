@@ -25,17 +25,13 @@ body {
   border: 0;
   transition: width 0.4s;
 }
-#search:hover,
-#search:focus {
-  width: 600px;
-}
+
 #ajaxResult {
   position: absolute;
   top: 25px;
   z-index: 2;
   left: 0;
   width: 600px;
-  height: fit-content;
   background-color: rgb(15, 15, 15);
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
