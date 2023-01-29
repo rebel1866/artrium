@@ -14,14 +14,15 @@ let infiniteScroll = (function () {
     }
     let isFive = window.matchMedia("(min-width: 1720px)").matches;
     if (isFive) {
-      pageSize = 5;
-      initPageSize = 10;
+      pageSize = 10;
+      initPageSize = 15;
     }
 
     fetch(`http://localhost:3000/paintings?_limit=${initPageSize}&_page=1`)
       .then((response) => response.json())
       .then((result) => fillPaintings(result));
     document.addEventListener("scroll", handle);
+    document.getElementById("showMore").addEventListener("click", handle);
   }
 
   function fillPaintings(data) {
