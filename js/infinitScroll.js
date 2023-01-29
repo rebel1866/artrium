@@ -86,5 +86,5 @@ let infiniteScroll = (function () {
     btn.innerHTML = "Show more";
     document.getElementById("moreC").appendChild(btn);
   }
-  return { init: init };
+  return { init: init, fillPaintings: fillPaintings };
 })();
