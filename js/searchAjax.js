@@ -19,7 +19,9 @@ let searchAjax = (function () {
     document
       .getElementById("search")
       .addEventListener("focusout", function (e) {
-        document.getElementById("ajaxResult").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("ajaxResult").style.display = "none";
+        }, 200);
         focus = false;
         if (e.target.value === "") {
           document.getElementById("search").style.width = "200px";
@@ -52,7 +54,7 @@ let searchAjax = (function () {
     lastAjaxResult = result;
     let ajax = document.getElementById("ajaxResult");
     ajax.innerHTML = "";
-    ajax.style.opacity = "1";
+    ajax.style.display = "";
     let counter = 0;
     for (let element of result) {
       if (counter === 5) {
