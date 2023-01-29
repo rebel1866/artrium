@@ -7,6 +7,17 @@ let infiniteScroll = (function () {
     '<div class="item">   <div class="itemPhoto">      <img />    </div><div class="iName iHeader"></div><div class="iAuthor iHeader"></div><div class="iPrice iHeader"></div><button class="getBtn">Buy it now!</button>  </div>';
 
   function init() {
+    let isFour = window.matchMedia("(min-width: 1350px)").matches;
+    if (!isFour) {
+      pageSize = 6;
+      initPageSize = 12;
+    }
+    let isFive = window.matchMedia("(min-width: 1720px)").matches;
+    if (isFive) {
+      pageSize = 5;
+      initPageSize = 10;
+    }
+
     fetch(`http://localhost:3000/paintings?_limit=${initPageSize}&_page=1`)
       .then((response) => response.json())
       .then((result) => fillPaintings(result));
