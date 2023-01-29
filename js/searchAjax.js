@@ -3,6 +3,13 @@ let searchAjax = (function () {
   let lastAjaxResult;
   let focus = false;
   function init() {
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("ajax-inner")) {
+        return;
+      } else {
+        document.getElementById("ajaxResult").style.display = "none";
+      }
+    });
     document.getElementById("search").addEventListener("input", function (e) {
       let val = e.target.value;
       if (val.length === 0) {
@@ -19,9 +26,6 @@ let searchAjax = (function () {
     document
       .getElementById("search")
       .addEventListener("focusout", function (e) {
-        setTimeout(() => {
-          document.getElementById("ajaxResult").style.display = "none";
-        }, 200);
         focus = false;
         if (e.target.value === "") {
           document.getElementById("search").style.width = "200px";
@@ -65,6 +69,7 @@ let searchAjax = (function () {
       div.classList.add("ajax-element");
       div.innerHTML = element.name + " (" + element.author + ")";
       div.setAttribute("id", element.id);
+      div.classList.add("ajax-inner");
       ajax.appendChild(div);
     }
     let div = document.createElement("div");
@@ -74,6 +79,7 @@ let searchAjax = (function () {
       div.innerHTML = "Nothing found";
     }
     div.setAttribute("id", "viewAllSearch");
+    div.classList.add("ajax-inner");
     ajax.appendChild(div);
 
     document
@@ -93,6 +99,7 @@ let searchAjax = (function () {
     document.getElementById("moreC").innerHTML = "";
     document.getElementById("search").style.width = "200px";
     document.getElementById("search").value = "";
+    document.getElementById("ajaxResult").style.display = "none";
   }
   return { init: init };
 })();
