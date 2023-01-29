@@ -4,6 +4,7 @@ function init() {
   header.init();
   infiniteScroll.init();
   initScrollTop();
+  searchAjax.init();
 }
 
 function initScrollTop() {

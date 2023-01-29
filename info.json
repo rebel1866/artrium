@@ -120,7 +120,7 @@
    
        {
     "id":10,
-    "name":"Luncheon Of The Boating Party",
+    "name":"Luncheon Of The Boating Night",
     "author":"Sandro Botticelli",
     "price":975,
     "img":"img/5.jpg",
@@ -303,7 +303,7 @@
     },
           {
     "id":24,
-    "name":"Cotton Office In Orleans",
+    "name":"Cotton night In Orleans",
     "author":"Michelangelo",
     "price":7500,
     "img":"img/5.jpg",
@@ -407,7 +407,7 @@
     },
           {
     "id":32,
-    "name":"The Portrait",
+    "name":"The Night Portrait",
     "author":"Edouard Manet",
     "price":1900,
     "img":"img/5.jpg",
@@ -486,7 +486,7 @@
     },
           {
     "id":38,
-    "name":"Whistler's Mother",
+    "name":"Whistler's Night",
     "author":"Jacques-Louis David",
     "price":840,
     "img":"img/5.jpg",
@@ -512,7 +512,7 @@
     },
           {
     "id":40,
-    "name":"Large Seated Nude",
+    "name":"Large Seated Night",
     "author":"Pieter Bruegel",
     "price":1500,
     "img":"img/5.jpg",
