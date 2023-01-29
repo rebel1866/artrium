@@ -46,10 +46,8 @@ let infiniteScroll = (function () {
     if (isExecuted) {
       return;
     }
-    if (
-      document.getElementById("showMore").getBoundingClientRect().y <
-      window.innerHeight
-    ) {
+    let more = document.getElementById("showMore");
+    if (more !== null && more.getBoundingClientRect().y < window.innerHeight) {
       isExecuted = true;
       fetchItems();
     }
