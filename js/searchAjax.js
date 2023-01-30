@@ -67,7 +67,13 @@ let searchAjax = (function () {
       counter++;
       let div = document.createElement("div");
       div.classList.add("ajax-element");
-      div.innerHTML = element.name + " (" + element.author + ")";
+      let name = element.name;
+      let str = document.getElementById("search").value;
+      let fIndex = new RegExp(str, "gi").exec(name).index;
+      let lIndex = fIndex + str.length;
+      name = insert(name, lIndex, "</span>");
+      name = insert(name, fIndex, '<span class="hgl">');
+      div.innerHTML = name + " (" + element.author + ")";
       div.setAttribute("id", element.id);
       div.classList.add("ajax-inner");
       ajax.appendChild(div);
@@ -100,6 +106,9 @@ let searchAjax = (function () {
     document.getElementById("search").style.width = "200px";
     document.getElementById("search").value = "";
     document.getElementById("ajaxResult").style.display = "none";
+  }
+  function insert(str, index, value) {
+    return str.substr(0, index) + value + str.substr(index);
   }
   return { init: init };
 })();
