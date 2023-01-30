@@ -431,11 +431,14 @@ body {
   overflow: hidden;
   text-align: justify;
 }
-
+html {
+  position: relative;
+}
 #footer {
   background-color: black;
-  position: relative;
-  top: 200px;
+  position: absolute;
+  bottom: -250px;
+  width: 100%;
   height: 60px;
   max-width: 2000px;
   margin: 0 auto;
