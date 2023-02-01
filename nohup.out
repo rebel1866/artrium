@@ -1,0 +1,26 @@
+
+  \{^_^}/ hi!
+
+  Loading info.json
+  Done
+
+  Resources
+  http://localhost:3000/paintings
+  http://localhost:3000/galleries
+  http://localhost:3000/feedbacks
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+Some error occurred Error: listen EADDRINUSE: address already in use 127.0.0.1:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+    at listenInCluster (node:net:1420:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (node:net:1559:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:73:8) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 3000
+}

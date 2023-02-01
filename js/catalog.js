@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   header.init();
+  signIn.init();
   infiniteScroll.init();
   initScrollTop();
   searchAjax.init();
