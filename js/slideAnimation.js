@@ -14,7 +14,7 @@ let slideAnimation = (function () {
         }
         document.getElementById("left").addEventListener("click", goLeft);
         document.getElementById("right").addEventListener("click", goRight);
-        goLeftRight();
+        // goLeftRight();
     }
 
     function goLeft() {
@@ -30,7 +30,7 @@ let slideAnimation = (function () {
             let transformNew = transformOld + 100;
             slide.style.transform = `translateX(${transformNew}%)`;
         }
-        goLeftRight();
+        // goLeftRight();
     }
 
     function goRight() {
@@ -46,7 +46,7 @@ let slideAnimation = (function () {
             let transformNew = transformOld - 100;
             slide.style.transform = `translateX(${transformNew}%)`;
         }
-        goLeftRight();
+        // goLeftRight();
     }
 
     function goLeftRight() {
