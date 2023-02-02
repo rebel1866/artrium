@@ -6,6 +6,7 @@ function init() {
   infiniteScroll.init();
   initScrollTop();
   searchAjax.init();
+  cart.init();
 }
 
 function initScrollTop() {
