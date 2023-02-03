@@ -4,7 +4,7 @@ let infiniteScroll = (function () {
   let pageSize = 8;
   let initPageSize = 16;
   const pattern =
-    '<div class="item">   <div class="itemPhoto">      <img />    </div><div class="iName iHeader"></div><div class="iAuthor iHeader"></div><div class="iPrice iHeader"></div><button class="getBtn">Buy it now!</button>  </div>';
+    '<div class="item">   <div class="itemPhoto">      <img />    </div><div class="iName iHeader"></div><div class="iAuthor iHeader"></div><div class="iPrice iHeader"></div><button class="getBtn">BUY IT NOW!</button>  </div>';
 
   function init() {
     let isFour = window.matchMedia("(min-width: 1350px)").matches;
