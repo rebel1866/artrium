@@ -5,12 +5,14 @@ let cart = (function () {
       document.getElementById("cartForm").style.display = "block";
     });
     document.getElementById("cart").addEventListener("mouseout", (e) => {
-      if (e.relatedTarget.getAttribute("id") !== "cartForm") {
+      if (e.relatedTarget.getAttribute("id") !== "cartForm" && !e.relatedTarget.classList.contains('cartItem')) {
         document.getElementById("cartForm").style.display = "none";
       }
     });
-    document.getElementById("cartForm").addEventListener("mouseout", () => {
+    document.getElementById("cartForm").addEventListener("mouseout", (e) => {
+      if ( e.relatedTarget !== null && !e.relatedTarget.classList.contains('cartEl')) {
       document.getElementById("cartForm").style.display = "none";
+      }
     });
   }
   return { init: init };
