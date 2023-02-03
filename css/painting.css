@@ -1,0 +1,54 @@
+html{
+    overflow-x:hidden;
+  }
+  
+  h1,
+  h2 {
+    color: white;
+    font-style: italic;
+  }
+  h1 {
+    margin-top: 0px;
+    margin-bottom: -10px;
+  }
+  #headers {
+    position: relative;
+    top: 20px;
+    left: 15px;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+  #gallery {
+    position: relative;
+    top: 20px;
+    box-sizing: border-box;
+  }
+  #mainSlide {
+    width: 850px;
+    height: 450px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #slideList {
+    width: 850px;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #mainSlide img {
+    width: inherit;
+    height: inherit;
+  }
+  #slideList img {
+    height: inherit;
+    width: 141.5px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-collapse:collapse;
+    cursor:pointer;
+  }
+  #slideList img:hover {
+   border: 2px solid red;
+  }
+  
