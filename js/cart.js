@@ -3,7 +3,7 @@ let cart = (function () {
     '<div class="cartItem cartEl"><img class="cartImage cartEl" src="|imgPath|" ><div class="cartTitle cartEl cartHeader">|name|</div> <div class="cartAuthor cartEl cartHeader">|author|</div><div class="cartPrice cartEl cartHeader">|price|$</div></div>';
 
   const cartAfter =
-    ' #cart::after {content: "|amount|";font-weight: bold;background: dodgerblue;border-radius: 50%; width: 10px;   margin-top: -10px;margin-left: -30px; font-size: 13px;padding: 2px }';
+    ' #cart::after {content: "|amount|";font-weight: bold;background: red;border-radius: 50%; width: 10px;   margin-top: -10px;margin-left: -30px; font-size: 11px;padding: 1px; padding-bottom:3px; padding-top:0; }';
 
   function init() {
     document.getElementById("cartForm").style.display = "none";
