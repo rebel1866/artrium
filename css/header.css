@@ -396,7 +396,10 @@
   left: 6px;
   border: 1px solid white;
   border-radius: 50%;
+ 
   padding: 0px 6px 0px 6px;
+  -moz-padding-end: 4px;
+    -moz-padding-start: 4px;
   cursor: pointer;
 }
 .removeItem:hover {
