@@ -1,6 +1,11 @@
 let cart = (function () {
   const elementPattern =
-    '<div class="cartItem cartEl"><img class="cartImage cartEl" src="|imgPath|" ><div class="cartTitle cartEl cartHeader">|name|</div> <div class="cartAuthor cartEl cartHeader">|author|</div><div class="cartPrice cartEl cartHeader">|price|$</div></div>';
+    '<div class="cartItem cartEl"><img class="cartImage cartEl" src="|imgPath|" >' +
+    '<div class="cartTitle cartEl cartHeader">|name|</div> <div class="cartAuthor cartEl' +
+    ' cartHeader">|author|</div><div class="cartPrice cartEl cartHeader">|price|$</div>' +
+    ' <div class="manageBtns cartEl"><div class="mAmount cartEl"><div class="increase cartEl">' +
+    '</div> <div class="amountItems cartEl">|amountItems|</div><div class="decrease cartEl"></div>' +
+    ' </div> <div class="removeItem cartEl">+</div> </div></div>';
 
   const cartAfter =
     ' #cart::after {content: "|amount|";font-weight: bold;background: red;border-radius: 50%; width: 10px;   margin-top: -10px;margin-left: -30px; font-size: 11px;padding: 1px; padding-bottom:3px; padding-top:0; }';
@@ -46,16 +51,19 @@ let cart = (function () {
       items = items.slice(-3);
     }
     for (let i = 0; i < items.length; i++) {
-      let obj = items[i];
+      let obj = items[i].obj;
       let res = elementPattern.replace("|price|", obj.price);
       res = res.replace("|name|", obj.name);
       res = res.replace("|author|", obj.author);
       res = res.replace("|imgPath|", obj.img);
+      res = res.replace("|amountItems|", items[i].amount);
       rootElement.innerHTML = rootElement.innerHTML + res;
     }
     rootElement.innerHTML =
       rootElement.innerHTML +
-      '<button id="getAll" class="cartEl">VIEW ALL</button>';
+      '<div id="totalBlock" class="cartEl"><div id="totalHead" class="cartEl">TOTAL</div><div id="totC" class="cartEl">' +
+      '<div class="cartEl" id="totalItems">8 items</div> <div class="cartEl" id="totalPrice">2500$</div></div>' +
+      ' <button id="getAll" class="cartEl">VIEW ALL</button>';
   }
 
   return { init: init };
