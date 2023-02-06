@@ -346,7 +346,7 @@
 
   position: absolute;
   right: 40px;
-  top: 10px;
+  top: 15px;
 }
 
 .mAmount {
@@ -384,49 +384,58 @@
   border-radius: 50%;
   padding: 1px 6px 1px 6px;
   margin-left: -3px;
+  -moz-margin-start: -4px;
   cursor: pointer;
 }
 
-.removeItem {
+.closeInner {
   color: white;
+  width: fit-content;
+  height: fit-content;
   font-size: 18px;
   position: absolute;
-  transform: rotate(45deg);
-  bottom: 10px;
-  left: 6px;
-  border: 1px solid white;
-  border-radius: 50%;
- 
-  padding: 0px 6px 0px 6px;
-  -moz-padding-end: 4px;
-    -moz-padding-start: 4px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
   cursor: pointer;
+  box-sizing: border-box;
 }
-.removeItem:hover {
+.closeOuter:hover {
   background: rgb(134, 21, 21);
 }
-#totalBlock{
-  position:absolute;
-  bottom:10px;
-  left:10px;
-    width:100%;
-  color:white;
+
+.closeOuter {
+  box-sizing: border-box;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 1px solid white;
+  border-radius: 50%;
+  bottom: 10px;
+  left: 7px;
 }
-#totalHead{
-  float:left;
-  font-weight:bold;
-  font-size:22px;
-  margin-top:11px;
+#totalBlock {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+  color: white;
 }
-#totC{
-  font-size:20px;
-  margin-left:100px;
+#totalHead {
+  float: left;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 11px;
 }
-#totalItems{
+#totC {
+  font-size: 20px;
+  margin-left: 100px;
+}
+#totalItems {
   text-decoration: underline red;
-   text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
   text-underline-position: under;
 }
-#totalPrice{
-  margin-top:3px;
+#totalPrice {
+  margin-top: 3px;
 }
