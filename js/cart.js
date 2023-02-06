@@ -49,8 +49,40 @@ let cart = (function () {
           render();
         }, 400);
       }
+      if (e.target.classList.contains("increase")) {
+        let id = e.path[3].getAttribute("id");
+        increment(id);
+      }
+      if (e.target.classList.contains("decrease")) {
+        let id = e.path[3].getAttribute("id");
+        decrement(id);
+      }
     });
     render();
+  }
+
+  function increment(id) {
+    let items = JSON.parse(window.localStorage.getItem("cartItems"));
+    for (const el of items) {
+      if (id == el.obj.id) {
+        el.amount = el.amount + 1;
+      }
+    }
+    window.localStorage.setItem("cartItems", JSON.stringify(items));
+    // render();
+  }
+  function decrement(id) {
+    let items = JSON.parse(window.localStorage.getItem("cartItems"));
+    for (const el of items) {
+      if (id == el.obj.id) {
+        if (el.amount == 1) {
+          return;
+        }
+        el.amount = el.amount - 1;
+      }
+    }
+    window.localStorage.setItem("cartItems", JSON.stringify(items));
+    // render();
   }
   function removeById(id) {
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
@@ -69,15 +101,6 @@ let cart = (function () {
 
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
 
-    if (items.length !== 0) {
-      document.getElementsByTagName("style")[0].innerHTML = cartAfter.replace(
-        "|amount|",
-        items.length
-      );
-    } else {
-      document.getElementsByTagName("style")[0].innerHTML = "";
-    }
-
     if (items.length > 3) {
       items = items.slice(-3);
     }
@@ -94,6 +117,14 @@ let cart = (function () {
       res = res.replaceAll("|itemid|", obj.id);
       res = res.replace("|amountItems|", items[i].amount);
       rootElement.innerHTML = rootElement.innerHTML + res;
+    }
+    if (items.length !== 0) {
+      document.getElementsByTagName("style")[0].innerHTML = cartAfter.replace(
+        "|amount|",
+        amountItems
+      );
+    } else {
+      document.getElementsByTagName("style")[0].innerHTML = "";
     }
     let manRes = manageBtnsHtml.replace("|amountItems|", amountItems);
     manRes = manRes.replace("|totalPrice|", totalPrice);
