@@ -62,14 +62,22 @@ let cart = (function () {
   }
 
   function increment(id) {
+    let currentPrice;
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
     for (const el of items) {
       if (id == el.obj.id) {
         el.amount = el.amount + 1;
+        currentPrice = el.obj.price;
       }
     }
     window.localStorage.setItem("cartItems", JSON.stringify(items));
     // render();
+    let oldAmountItems = Number(document.getElementById('totalItems').innerHTML.substring(0,1));
+    let newAmountItems = oldAmountItems + 1;
+    let priceHtml = document.getElementById('totalPrice').innerHTML;
+    let oldPrice = Number(priceHtml.substring(0,priceHtml.length-1));
+    let newPrice = oldPrice + currentPrice;
+    
   }
   function decrement(id) {
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
