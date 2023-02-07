@@ -7,4 +7,5 @@ function init() {
   newPaintings.buildNewPaintings();
   tabs.buildTabs();
   feedbacks.buildFeedbacks();
+  cart.init();
 }

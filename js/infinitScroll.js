@@ -3,10 +3,17 @@ let infiniteScroll = (function () {
   let page = 2;
   let pageSize = 8;
   let initPageSize = 16;
+
   const pattern =
     '<div class="item">   <div class="itemPhoto">      <img />    </div><div class="iName iHeader"></div><div class="iAuthor iHeader"></div><div class="iPrice iHeader"></div><button class="getBtn">BUY IT NOW!</button>  </div>';
 
   function init() {
+    document.getElementById("items").addEventListener("click", (e) => {
+      if (e.target.classList.contains("getBtn")) {
+        let id = e.composedPath()[1].getAttribute("id");
+        window.location.href = `/home/stanislav/artrium/painting.html?id=${id}`;
+      }
+    });
     let isFour = window.matchMedia("(min-width: 1350px)").matches;
     if (!isFour) {
       pageSize = 6;
@@ -40,6 +47,7 @@ let infiniteScroll = (function () {
     lastItem.querySelector(".iName").innerHTML = element.name;
     lastItem.querySelector(".iAuthor").innerHTML = element.author;
     lastItem.querySelector(".iPrice").innerHTML = element.price + "$";
+    lastItem.querySelector(".getBtn").setAttribute("id", "i" + element.id);
   }
 
   function handle() {
