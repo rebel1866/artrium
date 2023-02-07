@@ -1,6 +1,8 @@
 let painting = (function () {
   document.addEventListener("DOMContentLoaded", init);
 
+  let current;
+
   function init() {
     header.init();
     cart.init();
@@ -22,6 +24,16 @@ let painting = (function () {
       el.style.border = "2px solid red";
       document.getElementById(nId).style.display = "";
     });
+    document.getElementById("addToCart").addEventListener("click", () => {
+      let storage = window.localStorage.getItem("cartItems");
+      let array = [];
+      if (storage !== null) {
+        array = JSON.parse(storage);
+      }
+      array.push({ obj: current, amount: 1 });
+      window.localStorage.setItem("cartItems", JSON.stringify(array));
+      cart.render();
+    });
   }
 
   function loadItem() {
@@ -31,7 +43,9 @@ let painting = (function () {
       .then((result) => viewPainting(result));
   }
 
-  function viewPainting(painting) {}
+  function viewPainting(paintings) {
+    current = paintings[0];
+  }
 
   return { init: init };
 })();

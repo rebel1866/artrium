@@ -22,6 +22,7 @@ let cart = (function () {
     });
     document.getElementById("cart").addEventListener("mouseout", (e) => {
       if (
+        e.relatedTarget.getAttribute("id") !== null &&
         e.relatedTarget.getAttribute("id") !== "cartForm" &&
         !e.relatedTarget.classList.contains("cartItem")
       ) {
@@ -150,8 +151,11 @@ let cart = (function () {
   function render() {
     let rootElement = document.getElementById("cartForm");
     rootElement.innerHTML = "";
-
-    let items = JSON.parse(window.localStorage.getItem("cartItems"));
+    let storage = window.localStorage.getItem("cartItems");
+    if (storage === null) {
+      return;
+    }
+    let items = JSON.parse(storage);
 
     if (items.length > 3) {
       items = items.slice(-3);
@@ -191,5 +195,5 @@ let cart = (function () {
     return total;
   }
 
-  return { init: init };
+  return { init: init, render: render };
 })();
