@@ -54,7 +54,7 @@ let cart = (function () {
         increment(id);
       }
       if (e.target.classList.contains("decrease")) {
-        let id = e.composedPath[3].getAttribute("id");
+        let id = e.composedPath()[3].getAttribute("id");
         decrement(id);
       }
     });
@@ -71,28 +71,70 @@ let cart = (function () {
       }
     }
     window.localStorage.setItem("cartItems", JSON.stringify(items));
-    // render();
-    let oldAmountItems = Number(document.getElementById('totalItems').innerHTML.substring(0,1));
+    let totalHtml = document.getElementById("totalItems").innerHTML;
+
+    let oldAmountItems = Number(
+      totalHtml.substring(0, totalHtml.length - " items".length)
+    );
     let newAmountItems = oldAmountItems + 1;
-    let priceHtml = document.getElementById('totalPrice').innerHTML;
-    let oldPrice = Number(priceHtml.substring(0,priceHtml.length-1));
+    let priceHtml = document.getElementById("totalPrice").innerHTML;
+    let oldPrice = Number(priceHtml.substring(0, priceHtml.length - 1));
     let newPrice = oldPrice + currentPrice;
-    document.getElementById('totalItems').innerHTML = `${newAmountItems} items`;
-    document.getElementById('totalPrice').innerHTML = `${newPrice}$`;
-    
+    document.getElementById("totalItems").innerHTML = `${newAmountItems} items`;
+    document.getElementById("totalPrice").innerHTML = `${newPrice}$`;
+    let currentAmount = getCurrentAmount();
+    if (currentAmount !== 0) {
+      document.getElementsByTagName("style")[0].innerHTML = cartAfter.replace(
+        "|amount|",
+        currentAmount
+      );
+    } else {
+      document.getElementsByTagName("style")[0].innerHTML = "";
+    }
+    let idEscape = CSS.escape(id);
+    let oldA = Number(
+      document.querySelector(`#${idEscape} .amountItems`).innerHTML
+    );
+    document.querySelector(`#${idEscape} .amountItems`).innerHTML = ++oldA;
   }
   function decrement(id) {
+    let idEscape = CSS.escape(id);
+    let oldA = Number(
+      document.querySelector(`#${idEscape} .amountItems`).innerHTML
+    );
+    if (oldA === 1) {
+      return;
+    }
+    let currentPrice;
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
     for (const el of items) {
       if (id == el.obj.id) {
-        if (el.amount == 1) {
-          return;
-        }
         el.amount = el.amount - 1;
+        currentPrice = el.obj.price;
       }
     }
     window.localStorage.setItem("cartItems", JSON.stringify(items));
-    // render();
+    let totalHtml = document.getElementById("totalItems").innerHTML;
+
+    let oldAmountItems = Number(
+      totalHtml.substring(0, totalHtml.length - " items".length)
+    );
+    let newAmountItems = oldAmountItems - 1;
+    let priceHtml = document.getElementById("totalPrice").innerHTML;
+    let oldPrice = Number(priceHtml.substring(0, priceHtml.length - 1));
+    let newPrice = oldPrice - currentPrice;
+    document.getElementById("totalItems").innerHTML = `${newAmountItems} items`;
+    document.getElementById("totalPrice").innerHTML = `${newPrice}$`;
+    let currentAmount = getCurrentAmount();
+    if (currentAmount !== 0) {
+      document.getElementsByTagName("style")[0].innerHTML = cartAfter.replace(
+        "|amount|",
+        currentAmount
+      );
+    } else {
+      document.getElementsByTagName("style")[0].innerHTML = "";
+    }
+    document.querySelector(`#${idEscape} .amountItems`).innerHTML = --oldA;
   }
   function removeById(id) {
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
@@ -139,6 +181,14 @@ let cart = (function () {
     let manRes = manageBtnsHtml.replace("|amountItems|", amountItems);
     manRes = manRes.replace("|totalPrice|", totalPrice);
     rootElement.innerHTML = rootElement.innerHTML + manRes;
+  }
+  function getCurrentAmount() {
+    let items = JSON.parse(window.localStorage.getItem("cartItems"));
+    let total = 0;
+    for (const el of items) {
+      total = total + el.amount;
+    }
+    return total;
   }
 
   return { init: init };
