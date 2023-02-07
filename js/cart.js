@@ -42,7 +42,7 @@ let cart = (function () {
           e.target.classList.contains("closeOuter")) ||
         e.target.classList.contains("closeInner")
       ) {
-        let id = e.path[0].getAttribute("itemid");
+        let id = e.composedPath()[0].getAttribute("itemid");
         document.getElementById(id).style.backgroundColor = "rgb(134, 21, 21)";
         removeById(id);
         setTimeout(() => {
@@ -50,11 +50,11 @@ let cart = (function () {
         }, 400);
       }
       if (e.target.classList.contains("increase")) {
-        let id = e.path[3].getAttribute("id");
+        let id = e.composedPath()[3].getAttribute("id");
         increment(id);
       }
       if (e.target.classList.contains("decrease")) {
-        let id = e.path[3].getAttribute("id");
+        let id = e.composedPath[3].getAttribute("id");
         decrement(id);
       }
     });
@@ -77,6 +77,8 @@ let cart = (function () {
     let priceHtml = document.getElementById('totalPrice').innerHTML;
     let oldPrice = Number(priceHtml.substring(0,priceHtml.length-1));
     let newPrice = oldPrice + currentPrice;
+    document.getElementById('totalItems').innerHTML = `${newAmountItems} items`;
+    document.getElementById('totalPrice').innerHTML = `${newPrice}$`;
     
   }
   function decrement(id) {
