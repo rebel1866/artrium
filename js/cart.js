@@ -8,7 +8,8 @@ let cart = (function () {
     ' </div> <div itemId="|itemid|" class="closeOuter cartEl"> <div itemId="|itemid|" class="closeInner cartEl">+</div></div></div></div>';
 
   const cartAfter =
-    ' #cart::after {content: "|amount|";font-weight: bold;background: red;border-radius: 50%; width: 10px;   margin-top: -10px;margin-left: -30px; font-size: 11px;padding: 1px; padding-bottom:3px; padding-top:0; }';
+    ' #cart::after {content: "|amount|";font-weight: bold;background: red;border-radius: 50%; width: 10px;   margin-top: -10px;margin-left: -30px;'+
+    ' font-size: 11px;padding: 1px; padding-bottom:3px; padding-top:0; }';
 
   const manageBtnsHtml =
     '<div id="totalBlock" class="cartEl"><div id="totalHead" class="cartEl">TOTAL</div><div id="totC" class="cartEl">' +
