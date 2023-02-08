@@ -8,7 +8,7 @@ let painting = (function () {
     cart.init();
     signIn.init();
     loadItem();
-    document.getElementById("1").style.border = "2px solid red";
+    document.querySelector("#slideList img").style.border = "2px solid red";
     document.getElementById("slideList").addEventListener("click", (e) => {
       let el = e.target;
       let id = el.getAttribute("id");
@@ -45,6 +45,8 @@ let painting = (function () {
 
   function viewPainting(paintings) {
     current = paintings[0];
+    document.getElementById("pName").innerHTML = current.name;
+    document.getElementById("pAuthor").innerHTML = current.author;
   }
 
   return { init: init };

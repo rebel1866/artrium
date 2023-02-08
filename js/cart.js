@@ -20,6 +20,7 @@ let cart = (function () {
     document.getElementById("cartForm").style.display = "none";
     document.getElementById("cart").addEventListener("mouseover", () => {
       document.getElementById("cartForm").style.display = "block";
+      document.getElementById("cartForm").scroll({ top: 500 });
     });
     document.getElementById("cart").addEventListener("mouseout", (e) => {
       if (
@@ -156,26 +157,33 @@ let cart = (function () {
     if (storage === null) {
       return;
     }
-    let items = JSON.parse(storage);
+    let itemsFull = JSON.parse(storage);
+    let itemsShort;
 
-    if (items.length > 3) {
-      items = items.slice(-3);
-    }
+    // if (itemsFull.length > 3) {
+    //   itemsShort = itemsFull.slice(-3);
+    // } else {
+    itemsShort = itemsFull;
+    // }
     let amountItems = 0;
     let totalPrice = 0;
-    for (let i = 0; i < items.length; i++) {
-      let obj = items[i].obj;
-      amountItems = amountItems + 1 * items[i].amount;
-      totalPrice = totalPrice + obj.price * items[i].amount;
+    for (let i = 0; i < itemsFull.length; i++) {
+      let obj = itemsFull[i].obj;
+      amountItems = amountItems + 1 * itemsFull[i].amount;
+      totalPrice = totalPrice + obj.price * itemsFull[i].amount;
+    }
+
+    for (let i = 0; i < itemsShort.length; i++) {
+      let obj = itemsShort[i].obj;
       let res = elementPattern.replace("|price|", obj.price);
       res = res.replace("|name|", obj.name);
       res = res.replace("|author|", obj.author);
       res = res.replace("|imgPath|", obj.img);
       res = res.replaceAll("|itemid|", obj.id);
-      res = res.replace("|amountItems|", items[i].amount);
+      res = res.replace("|amountItems|", itemsShort[i].amount);
       rootElement.innerHTML = rootElement.innerHTML + res;
     }
-    if (items.length !== 0) {
+    if (itemsShort.length !== 0) {
       document.getElementsByTagName("style")[0].innerHTML = cartAfter.replace(
         "|amount|",
         amountItems
@@ -186,6 +194,15 @@ let cart = (function () {
     let manRes = manageBtnsHtml.replace("|amountItems|", amountItems);
     manRes = manRes.replace("|totalPrice|", totalPrice);
     rootElement.innerHTML = rootElement.innerHTML + manRes;
+    if (itemsShort.length >= 3) {
+      document.getElementById("totalBlock").style.position = "relative";
+      document.getElementById("totalBlock").style.bottom = "";
+      document.getElementById("cartForm").style.height = "440px";
+    } else {
+      document.getElementById("totalBlock").style.position = "absolute";
+      document.getElementById("totalBlock").style.bottom = "10px";
+      document.getElementById("cartForm").style.height = "400px";
+    }
   }
   function getCurrentAmount() {
     let items = JSON.parse(window.localStorage.getItem("cartItems"));
