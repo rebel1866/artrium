@@ -35,7 +35,7 @@ let painting = (function () {
       cart.render();
     });
   }
-
+  // fsd
   function loadItem() {
     let id = window.location.search.substring(4);
     fetch(`http://localhost:3000/paintings?id=${id}`)
