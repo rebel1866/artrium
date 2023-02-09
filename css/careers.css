@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 
   position: relative;
-  width: 100%;
+  width: 104%;
   max-width: 2000px;
   margin: 0 auto;
   overflow: hidden;
@@ -21,7 +21,7 @@ html {
   background-image: url("/home/stanislav/artrium/img/careers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -250px;
+  background-position: -90px -250px;
   overflow: hidden;
 }
 #onAbove {
@@ -30,7 +30,7 @@ html {
   left: 0;
   width: inherit;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #textContainer {
   position: absolute;
@@ -64,7 +64,7 @@ html {
   text-align: center;
 }
 #btn {
-  background: dodgerblue;
+  background: rgb(25, 103, 180);
   border: none;
   height: 40px;
   width: 350px;
@@ -74,5 +74,5 @@ html {
   cursor: pointer;
 }
 #btn:hover {
-  background: green;
+  background: rgb(21, 114, 207);
 }
