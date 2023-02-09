@@ -115,7 +115,7 @@ img {
 }
 #hireBtn {
   animation-name: fAnima;
-  animation-duration: 3 s;
+  animation-duration: 3s;
 }
 
 @keyframes fAnima {
