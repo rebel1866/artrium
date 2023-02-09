@@ -30,5 +30,49 @@ html {
   left: 0;
   width: inherit;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#textContainer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: 50%;
+  width: 80%;
+  height: 100px;
+  box-sizing: border-box;
+}
+#first,
+#middle,
+#last {
+  display: inline-block;
+  width: 33.3%;
+  box-sizing: border-box;
+  height: 50%;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  text-decoration: underline red;
+  text-decoration-thickness: 4px;
+  text-underline-position: under;
+  font-style: italic;
+}
+#hireBtn {
+  height: 50%;
+  width: 70%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+#btn {
+  background: dodgerblue;
+  border: none;
+  height: 40px;
+  width: 350px;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#btn:hover {
+  background: green;
 }
