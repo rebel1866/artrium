@@ -46,6 +46,7 @@ img {
 #first,
 #middle,
 #last {
+  position: relative;
   display: inline-block;
   width: 33.3%;
   box-sizing: border-box;
@@ -59,6 +60,7 @@ img {
   font-style: italic;
 }
 #hireBtn {
+  position: relative;
   height: 50%;
   width: 70%;
   margin: 0 auto;
@@ -96,5 +98,32 @@ img {
   100% {
     left: 40px;
     transform: rotate(1080deg);
+  }
+}
+
+#first {
+  animation-name: fAnima;
+  animation-duration: 1s;
+}
+#middle {
+  animation-name: fAnima;
+  animation-duration: 1s;
+}
+#last {
+  animation-name: fAnima;
+  animation-duration: 1s;
+}
+#hireBtn {
+  animation-name: fAnima;
+  animation-duration: 3 s;
+}
+
+@keyframes fAnima {
+  0% {
+    top: 500px;
+  }
+
+  100% {
+    top: 0px;
   }
 }
