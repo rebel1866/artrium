@@ -81,7 +81,7 @@ img {
   background: rgb(21, 114, 207);
 }
 
-/* #logo {
+#logo {
   animation-name: logoAnima;
   animation-duration: 3s;
   z-index: 5;
@@ -99,28 +99,23 @@ img {
     left: 40px;
     transform: rotate(1080deg);
   }
-} */
+}
 
-#first {
-  animation-name: fAnima;
-  animation-duration: 1s;
-}
-#middle {
-  animation-name: fAnima;
-  animation-duration: 1s;
-}
+#first,
+#middle,
 #last {
   animation-name: fAnima;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 #hireBtn {
   animation-name: fAnima;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
 }
 
 @keyframes fAnima {
   0% {
-    top: 500px;
+    top: 1500px;
   }
 
   100% {
