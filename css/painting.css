@@ -54,3 +54,51 @@ html {
   width: 850px;
   margin: 0 auto;
 }
+#scrollTextC {
+  width: 800px;
+  height: 405px;
+  position: relative;
+  top: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+#scrollText {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 5px;
+  overflow-y: scroll;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  /* width: 0; */
+  background-color: red;
+  box-sizing: border-box;
+}
+#scrollText::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+#scrollText::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+#scrollText::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+#scrollText::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

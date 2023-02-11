@@ -34,8 +34,15 @@ let painting = (function () {
       window.localStorage.setItem("cartItems", JSON.stringify(array));
       cart.render();
     });
+    document.getElementById("scrollText").addEventListener("scroll", () => {
+      let el = document.getElementById("progress");
+      let total = document.getElementById("scrollText").scrollHeight;
+      let current = document.getElementById("scrollText").scrollTop;
+      let clientHeight = document.getElementById("scrollText").clientHeight;
+      el.style.width = ((current + clientHeight) / total) * 100 + "%";
+    });
   }
-  
+
   function loadItem() {
     let id = window.location.search.substring(4);
     fetch(`http://localhost:3000/paintings?id=${id}`)
