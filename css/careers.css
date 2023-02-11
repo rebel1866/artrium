@@ -80,12 +80,12 @@ img {
 #btn:hover {
   background: rgb(21, 114, 207);
 }
-
+/* 
 #logo {
   animation-name: logoAnima;
   animation-duration: 3s;
   z-index: 5;
-}
+} */
 @keyframes logoAnima {
   0% {
     left: 1200px;
