@@ -186,6 +186,7 @@
 }
 
 #signinF {
+  user-select: none;
   position: fixed;
   top: 20%;
   left: 50%;
@@ -459,4 +460,24 @@
 /* Handle on hover */
 #cartForm::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+#sHeader {
+  cursor: grab;
+  position: absolute;
+  width: 94%;
+  height: 40px;
+  top: 0;
+  left: 0;
+}
+#sHeader:active {
+  cursor: grabbing;
+}
+
+#center{
+  margin: 0 auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
